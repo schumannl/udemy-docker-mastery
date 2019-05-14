@@ -1,0 +1,2 @@
+docker container run -d --name drupal --network drupal-postgres -p 8080:80 -v drupal-modules:/var/www/html/modules -v drupal-profiles:/var/www/html/profiles -v drupal-themes:/var/www/html/themes -v drupal-sites:/var/www/html/sites drupal:latest
+docker container run -d --name postgres -e POSTGRES_PASSWORD=password -e POSTGRES_USER=user -e POSTGRES_DB=drupal --network drupal-postgres postgres:latest
