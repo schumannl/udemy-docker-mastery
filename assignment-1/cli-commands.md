@@ -2,8 +2,8 @@
 
 ### Starting containers
 ```
-docker container run --detach --name nginx --port 8080:80 nginx
-docker container run --detach --name httpd --port 8181:80 httpd
+docker container run --detach --name nginx --publish 8080:80 nginx
+docker container run --detach --name httpd --publish 8181:80 httpd
 docker container run --detach --name mysql --publish 3306:3306 --env MYSQL_RANDOM_ROOT_PASSWORD=1 mysql:5.7
 ```
 
